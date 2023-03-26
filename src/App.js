@@ -7,13 +7,15 @@ import LoginForm from "./components/login/Login";
 import BookList from './components/book/BookList';
 import NotAccess from './components/error/NotAccess';
 import ErrorPage from './components/error/ErrorPage';
+import WelcomePage from './components/welcome/WelcomePage';
 
 class App extends Component {
   render() {
     return (
         <Router>
           <Routes>
-            <Route path='/' Component={Home}/> 
+            <Route path='/' Component={WelcomePage}/>;
+            <Route path='/home' Component={Home}/> 
             <Route path='/devices' Component={DeviceList}/>
             <Route path='/books' Component={BookList}/>
             <Route path='/login' Component={LoginForm}/>
