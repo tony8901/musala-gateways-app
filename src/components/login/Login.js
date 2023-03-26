@@ -4,19 +4,13 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Button, Card, CardBody, CardHeader, Col, Form, FormGroup, Input, Label, Row, Toast, ToastBody, ToastHeader } from 'reactstrap';
 import AppNavbar from '../navbar/AppNavbar';
-
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const [visible, setVisible] = useState(false);
   const [headerText, setHeaderText] = useState('');
   const [bodyText, setBodyText] = useState('');
   const [style, setStyle] = useState({});
-
-  // useEffect(() => {
-  //   if (visible) {
-  //     setTimeout(() => setVisible(false), 10000);
-  //   }
-  // }, [visible]);
 
   const formik = useFormik({
     initialValues: {
@@ -107,7 +101,7 @@ const LoginForm = () => {
                 </Form>
                 <Toast isOpen={visible}>
                   <ToastHeader style={style}>{headerText}</ToastHeader>
-                  <ToastBody>{bodyText}</ToastBody>
+                  <ToastBody>{bodyText}Go to <Link to={"/home"} >Home</Link></ToastBody>
                 </Toast>
               </CardBody>
             </Card>

@@ -27,13 +27,13 @@ export default class AppNavbar extends Component {
             }
 
             return <Navbar color="dark" dark expand="md">
-                <NavbarBrand tag={Link} to="/">Home</NavbarBrand>
+                <NavbarBrand tag={Link} to="/home">Home</NavbarBrand>
                 <NavbarText>{user.sub}</NavbarText>
                 <Button onClick={logout}>Salir</Button>
             </Navbar>;
         } else {
             return <Navbar color="dark" dark expand="md">
-                <NavbarBrand tag={Link} to="/">Home</NavbarBrand>
+                <NavbarBrand tag={Link} to="/home">Home</NavbarBrand>
             </Navbar>;
         }
     }
