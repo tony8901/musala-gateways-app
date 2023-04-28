@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card, CardBody, CardHeader, Col, Row }from 'reactstrap';
 import AppNavbar from '../navbar/AppNavbar';
-import FormLogin from './FormLogin';
+import FormDevice from './FormDevice';
 
 
-const Login = () => {
+const DeviceRegister = () => {
   return (
     <div>
       <AppNavbar />
@@ -20,10 +20,10 @@ const Login = () => {
               }}
             >
               <CardHeader>
-                Login Form
+                Device Form
               </CardHeader>
               <CardBody id='cardBody'>
-                <FormLogin />
+                <FormDevice />
               </CardBody>
             </Card>
           </Col>
@@ -33,4 +33,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default DeviceRegister;
